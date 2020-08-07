@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:component-scan base-package="com.clc"></context:component-scan>
+	<bean id="question" class="com.clc.Question">
+		<property name="qId" value="1"></property>
+		<property name="questionAnswer">
+			<map>
+				<entry key="Is Java an OOP Language? " value="Yes"></entry>
+			</map>
+		</property>
+		<property name="b">
+			<list>
+				<ref bean="a1"></ref>
+				<ref bean="a2"></ref>
+				<ref bean="a3"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="question1" class="com.clc.Question">
+		<property name="qId" value="2"></property>
+		<property name="questionAnswer">
+			<map>
+				<entry key="What is the meaning of OOP? " value="Object Oriented Programming"></entry>
+			</map>
+		</property>
+		<property name="b">
+			<list>
+				<ref bean="b1"></ref>
+				<ref bean="b2"/>
+				<ref bean="b3"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="respondent" class="com.clc.Respondent">
+		<property name="rName" value="Wanjohi"></property>
+		<property name="rAge" value="25"></property>	
+	</bean>
+	<bean id="a1" class="com.clc.Ab">
+		<property name="id" value="1"></property>
+		<property name="submittedBy" value="Ule"></property>
+		<property name="answerString" value="No">
+		</property>	
+	</bean>
+	<bean id="a2" class="com.clc.Ab">
+		<property name="id" value="1"></property>
+		<property name="submittedBy" value="Py"></property>
+		<property name="answerString" value="Yes">
+		</property>	
+	</bean>
+	<bean id="a3" class="com.clc.Ab">
+		<property name="id" value="1"></property>
+		<property name="submittedBy" value="John"></property>
+		<property name="answerString" value="No">
+		</property>	
+	</bean>
+	
+	<bean id="b1" class="com.clc.Ab">
+		<property name="id" value="1"></property>
+		<property name="submittedBy" value="Pharis"></property>
+		<property name="answerString" value="Object Oriented Programming">
+		</property>	
+	</bean>
+	<bean id="b2" class="com.clc.Ab">
+		<property name="id" value="1"></property>
+		<property name="submittedBy" value="Lawrence"></property>
+		<property name="answerString" value="Object Oriented Programming">
+		</property>	
+	</bean>
+	<bean id="b3" class="com.clc.Ab">
+		<property name="id" value="1"></property>
+		<property name="submittedBy" value="Masai"></property>
+		<property name="answerString" value="Object Oriented Prop">
+		</property>	
+	</bean>
+	
+        
+</beans>
